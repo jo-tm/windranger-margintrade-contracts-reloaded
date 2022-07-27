@@ -18,7 +18,7 @@ contract TraderAccountFactory is CloneFactory {
         traderAccountAddress = _traderAccountAddress;
     }
 
-    function createTraderAccount(string memory _name) public {
+    function createTraderAccount(string memory _name) public returns (uint256) {
         address clone = _createClone(traderAccountAddress);
         //TraderAccountInterface(clone).init(_name);
         emit TraderAccountCreated(clone);
