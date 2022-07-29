@@ -10,8 +10,6 @@ interface TraderAccountInterface {
 
     function deposit(address _token, uint256 amount) external;
 
-    function approve(address token, uint256 amount) external returns (bool);
-
     function withdrawETH(uint256 amount) external;
 
     function withdraw(address _token, uint256 amount) external returns (bool);
