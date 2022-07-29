@@ -34,7 +34,7 @@ interface TraderAccountInterface {
 
     function liquidatePosition(
         address owner,
-        uint16 marketId,
+        uint16 poolId,
         bool longToken,
         uint256 minBuy,
         uint256 maxAmount,
@@ -53,7 +53,7 @@ interface TraderAccountInterface {
     ) external;
 
     function healthFactor(
-        uint16 marketId,
+        uint16 poolId,
         bool longToken,
         bytes memory dexData
     ) external view returns (uint256 current, uint256 average);
